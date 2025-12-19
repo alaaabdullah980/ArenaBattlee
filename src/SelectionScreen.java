@@ -31,7 +31,7 @@ public class SelectionScreen {
 
         choice1.getItems().addAll("Warrior", "Mage", "Goblin");
         choice2.getItems().addAll("Warrior", "Mage", "Goblin");
-        choice1.setValue("Warrior");  // Default to first option
+        choice1.setValue("Warrior");
         choice2.setValue("Warrior");
 
         Label player1Label = new Label("Player 1");
@@ -41,7 +41,7 @@ public class SelectionScreen {
 
         Button startButton = new Button("Start Game");
         startButton.setStyle("-fx-font-size: 24px; -fx-font-weight: bold; -fx-background-color: linear-gradient(to bottom, #00ff00, #32cd32); -fx-text-fill: white; -fx-border-color: #228b22; -fx-border-width: 3; -fx-border-radius: 10; -fx-background-radius: 10; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 10, 0, 0, 5);");
-        startButton.setPrefSize(200, 60);  // Increased size
+        startButton.setPrefSize(200, 60);
 
         startButton.setOnAction(event -> {
             Fighter f1 = createFighter(choice1.getValue(), 100, 250, true);
@@ -57,7 +57,7 @@ public class SelectionScreen {
         Fighter fighter = null;
         switch (name) {
             case "Warrior":
-                fighter = new Warrior(x, y, 100, 120, 60, null, isLeftSide);  // No initial weapon
+                fighter = new Warrior(x, y, 100, 120, 60, null, isLeftSide);
                 break;
             case "Mage":
                 fighter = new Mage(x, y, 100, 100, 50, null, isLeftSide);
