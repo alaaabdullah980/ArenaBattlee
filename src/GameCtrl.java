@@ -183,10 +183,12 @@ public class GameCtrl {
             if (p.getOwner() != p1 && p.getBounds().intersects(p1.getBounds())) {
                 p1.takeDamage(p.getDamage());
                 toRemove.add(p);
-            } else if (p.getOwner() != p2 && p.getBounds().intersects(p2.getBounds())) {
+            }
+            else if (p.getOwner() != p2 && p.getBounds().intersects(p2.getBounds())) {
                 p2.takeDamage(p.getDamage());
                 toRemove.add(p);
-            } else if (p.isOffScreen()) {
+            }
+            else if (p.isOffScreen()) {
                 toRemove.add(p);
             }
         }
